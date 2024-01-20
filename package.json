@@ -1,0 +1,31 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "solid-devtools": "^0.29.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vite-plugin-solid": "^2.8.2"
+  },
+  "dependencies": {
+    "@kobalte/core": "^0.12.1",
+    "solid-js": "^1.8.11"
+  },
+  "overrides": {
+    "solid-devtools": {
+      "vite": "^5.0.0"
+    },
+    "vite-plugin-solid": {
+      "vite": "^5.0.0"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.CheckList {
+  --check-list-item-pad: 10px;
+  --check-list-item-gap: 8px;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: var(--check-list-item-gap);
+    padding: var(--check-list-item-pad);
+  }
+
+  .CheckListShowCompleted {
+    padding: var(--check-list-item-pad);
+  }
+}
