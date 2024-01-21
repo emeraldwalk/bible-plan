@@ -1,7 +1,7 @@
 import { For, createEffect, createSignal } from 'solid-js'
 import styles from './CheckList.module.scss'
 import planText from '../data/five-day.txt?raw'
-import { CheckListItem, isRangeComplete } from '../model'
+import { CheckListItem, isRangeComplete, versionLink } from '../model'
 import { loadCheckListState, saveCheckListState } from '../data'
 
 export function CheckList() {
@@ -71,8 +71,10 @@ export function CheckList() {
                       }}
                     />
                     <span>{id + 1}</span>
-                    {/* youversion://bible?reference=JHN.1.1 */}
-                    <span>{label}</span>
+                    {/* <span>{label}</span> */}
+                    {label.split('; ').map((l) => (
+                      <a href={versionLink(l)}>{l}</a>
+                    ))}
                   </label>
                 </li>
               ) : null}

@@ -32,7 +32,8 @@ input[type='checkbox'] {
   border-radius: 0.5rem;
   &::before {
     content: '';
-    clip-path: polygon(9% 37%, 46% 68%, 88% 1%, 100% 8%, 50% 91%, 0 48%);
+    /* https://bennettfeely.com/clippy/ */
+    clip-path: polygon(11% 34%, 46% 68%, 88% 1%, 100% 8%, 50% 91%, 0 48%);
     width: var(--cb-size);
     height: var(--cb-size);
     transform: scale(0);
