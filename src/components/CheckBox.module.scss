@@ -1,0 +1,51 @@
+.CheckBox {
+  --cb-color-border: #888;
+  --cb-color-checked: #008;
+  --cb-color-unchecked: #fff;
+  --cb-size: 1.2em;
+  --cb-check-size: 1em;
+  --cb-gap: 0.4em;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  input {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  > span:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cb-color-unchecked);
+    border: 0.2em solid var(--cb-color-border);
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    width: var(--cb-size);
+    height: var(--cb-size);
+
+    &::before {
+      content: '';
+      display: block;
+      /* https://bennettfeely.com/clippy/ */
+      clip-path: polygon(11% 34%, 46% 68%, 88% 1%, 100% 8%, 50% 91%, 0 48%);
+      width: var(--cb-check-size);
+      height: var(--cb-check-size);
+      transform: scale(0);
+    }
+  }
+  > span:last-of-type {
+    margin-left: var(--cb-gap);
+  }
+
+  input:checked + span {
+    background-color: var(--cb-color-checked);
+  }
+  input:checked + span::before {
+    transform: scale(1);
+    background-color: var(--cb-color-unchecked);
+  }
+}
