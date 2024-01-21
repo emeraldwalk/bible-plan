@@ -24,8 +24,8 @@ input[type='checkbox'] {
   --cb-size: 1rem;
 
   background-color: var(--cb-color-unchecked);
-  appearance: none;
-  -webkit-appearance: none;
+  /* appearance: none;
+  -webkit-appearance: none; */
   display: flex;
   padding: var(--cb-padding);
   border: 0.2rem solid var(--cb-color-border);
