@@ -4,6 +4,7 @@ import planText from '../data/five-day.txt?raw'
 import { CheckListItem, isRangeComplete, versionLink } from '../model'
 import { loadCheckListState, saveCheckListState } from '../data'
 import { CheckBox } from './CheckBox'
+import logo from '../assets/favicon-32x32.png'
 
 export function CheckList() {
   const checkList: CheckListItem[] = planText
@@ -26,17 +27,20 @@ export function CheckList() {
 
   return (
     <div class={styles.CheckList}>
-      <CheckBox
-        class={styles.CheckBox}
-        isChecked={showCompleted()}
-        onChange={() =>
-          setCheckListState((s) => ({
-            ...s,
-            showCompleted: !s.showCompleted,
-          }))
-        }>
-        Show Completed
-      </CheckBox>
+      <span>
+        <img src={logo} />
+        <span>ible Plan</span>
+        <CheckBox
+          isChecked={showCompleted()}
+          onChange={() =>
+            setCheckListState((s) => ({
+              ...s,
+              showCompleted: !s.showCompleted,
+            }))
+          }>
+          Show Completed
+        </CheckBox>
+      </span>
 
       <ul>
         <For each={checkList}>

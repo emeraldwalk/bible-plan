@@ -1,10 +1,26 @@
 .CheckList {
   --check-list-item-pad: 10px;
   --check-list-item-gap: 8px;
+  --check-list-color-shadow: #888;
 
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100vh;
+
+  > span:first-of-type {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto 1fr;
+    gap: 2px;
+    box-shadow: 0 0px 20px -5px var(--check-list-color-shadow);
+    padding: var(--check-list-item-pad);
+    > span {
+      font-size: 1.2em;
+    }
+    :last-child {
+      justify-self: end;
+    }
+  }
 
   ul {
     display: flex;
