@@ -1,5 +1,7 @@
 # Bible Plan
 
+https://emeraldwalk.github.io/bible-plan/
+
 ## Project Setup
 
 - npx degit solidjs/templates/ts bible-plan

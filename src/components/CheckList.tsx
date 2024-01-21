@@ -1,5 +1,5 @@
 import { For, createEffect, createSignal } from 'solid-js'
-import styles from './CheckList.module.css'
+import styles from './CheckList.module.scss'
 import planText from '../data/five-day.txt?raw'
 import { CheckListItem, isRangeComplete } from '../model'
 import { loadCheckListState, saveCheckListState } from '../data'
