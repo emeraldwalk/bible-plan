@@ -28,7 +28,7 @@ export function CheckList() {
   return (
     <div class={styles.CheckList}>
       <span>
-        <a href="/">
+        <a href={import.meta.env.BASE_URL}>
           <img src={logo} />
           <span>ible Plan</span>
         </a>
