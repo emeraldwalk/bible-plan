@@ -7,19 +7,21 @@
   grid-template-rows: auto 1fr;
   height: 100vh;
 
-  > span:first-of-type {
-    display: grid;
+  a {
+    display: flex;
     align-items: center;
-    grid-template-columns: auto auto 1fr;
+    color: unset;
     gap: 2px;
-    box-shadow: 0 0px 20px -5px var(--check-list-color-shadow);
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+
+  > span:first-of-type {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0px 10px -5px var(--check-list-color-shadow);
     padding: var(--check-list-item-pad);
-    > span {
-      font-size: 1.2em;
-    }
-    :last-child {
-      justify-self: end;
-    }
+    justify-content: space-between;
   }
 
   ul {

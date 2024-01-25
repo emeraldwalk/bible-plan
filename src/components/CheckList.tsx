@@ -28,8 +28,10 @@ export function CheckList() {
   return (
     <div class={styles.CheckList}>
       <span>
-        <img src={logo} />
-        <span>ible Plan</span>
+        <a href="/">
+          <img src={logo} />
+          <span>ible Plan</span>
+        </a>
         <CheckBox
           isChecked={showCompleted()}
           onChange={() =>
